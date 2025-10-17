@@ -6,11 +6,12 @@ import {
   NavigationMenuItem,
   NavigationMenuTrigger,
   NavigationMenuContent,
-  NavigationMenuLink,
 } from "@/shadcn-components/ui/navigation-menu";
 
 import SubMenuFlyout from "./SubMenuFlyout";
 import SimpleNavbarLink from "./SimpleNavbarLink";
+import Image from "next/image";
+import Link from "next/link";
 
 const navBarData = [
   {
@@ -66,39 +67,43 @@ const navBarData = [
 
 function NavBar() {
   return (
-    <nav className="flex">
-      <h1>LOGO</h1>
-      <NavigationMenu>
-        <NavigationMenuList>
-          {/* return navbar links and their flyout sub menus */}
+    <nav className="flex justify-between px-12">
+      <Link href="/">
+        <Image src="/assets/logo.png" width={140} height={140} alt="logo" />
+      </Link>
 
-          {navBarData.map((section) => {
-            return (
-              <NavigationMenuItem key={section.topLabel}>
-                <NavigationMenuTrigger>
-                  {" "}
-                  {section.topLabel}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  {section.flyoutSubmenus.map((submenu) =>
-                    submenu.items ? (
-                      <SubMenuFlyout
-                        label={submenu.label}
-                        items={submenu.items}
-                      />
-                    ) : (
-                      <SimpleNavbarLink
-                        label={submenu.label}
-                        href={submenu.href}
-                      />
-                    )
-                  )}
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            );
-          })}
-        </NavigationMenuList>
-      </NavigationMenu>
+      <div className="p-6">
+        <NavigationMenu>
+          <NavigationMenuList>
+            {/* return navbar links and their flyout sub menus */}
+
+            {navBarData.map((section) => {
+              return (
+                <NavigationMenuItem key={section.topLabel}>
+                  <NavigationMenuTrigger>
+                    {section.topLabel}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    {section.flyoutSubmenus.map((submenu) =>
+                      submenu.items ? (
+                        <SubMenuFlyout
+                          label={submenu.label}
+                          items={submenu.items}
+                        />
+                      ) : (
+                        <SimpleNavbarLink
+                          label={submenu.label}
+                          href={submenu.href}
+                        />
+                      )
+                    )}
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              );
+            })}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
     </nav>
   );
 }
