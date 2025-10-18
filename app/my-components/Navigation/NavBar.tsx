@@ -12,6 +12,7 @@ import SubMenuFlyout from "./SubMenuFlyout";
 import SimpleNavbarLink from "./SimpleNavbarLink";
 import Image from "next/image";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 
 const navBarData = [
   {
@@ -69,14 +70,18 @@ function NavBar() {
   return (
     <nav className="flex justify-between px-12">
       <Link href="/">
-        <Image src="/assets/logo.png" width={140} height={140} alt="logo" />
+        <Image
+          src="/assets/TT_warriors_logo.png"
+          width={180}
+          height={140}
+          alt="logo"
+        />
       </Link>
 
       <div className="p-6">
         <NavigationMenu>
           <NavigationMenuList>
             {/* return navbar links and their flyout sub menus */}
-
             {navBarData.map((section) => {
               return (
                 <NavigationMenuItem key={section.topLabel}>
@@ -87,11 +92,13 @@ function NavBar() {
                     {section.flyoutSubmenus.map((submenu) =>
                       submenu.items ? (
                         <SubMenuFlyout
+                          key={uuidv4()}
                           label={submenu.label}
                           items={submenu.items}
                         />
                       ) : (
                         <SimpleNavbarLink
+                          key={uuidv4()}
                           label={submenu.label}
                           href={submenu.href}
                         />
