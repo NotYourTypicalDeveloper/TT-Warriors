@@ -4,11 +4,11 @@ import Image from "next/image";
 // breakpoint from "2lg" custom breakpoint 940px
 const HeroDesktop = () => {
   return (
-    <section className="bg-green-500 flex h-120 lg:h-120 xl:h-120 2xl:h-140 relative ">
+    <section className="bg-linear-to-t from-black via-red-500 to-red-400 flex h-120 lg:h-120 xl:h-120 2xl:h-140 relative ">
       <CustomShapeDivider />
       <div
         className="absolute bottom-0 left-6 xl:left-1 h-80 w-60 lg:h-90 lg:w-75 xl:h-110
-       xl:w-100"
+       xl:w-100 2xl:ml-20"
       >
         <Image
           alt="WTT player"
@@ -19,11 +19,11 @@ const HeroDesktop = () => {
       </div>
 
       {/* title and text */}
-      <div className="mt-26 w-sm mx-auto flex flex-col align-center justify-center text-white ">
-        <h1 className="uppercase font-extrabold text-4xl">
+      <div className="mt-26 w-sm 2xl:w-xl mx-auto flex flex-col align-center justify-center text-white">
+        <h1 className="uppercase font-bold text-4xl 2xl:text-6xl">
           Table Tennis Warriors
         </h1>
-        <p className="italic mt-3 text-lg lg:text-xl">
+        <p className="italic mt-3 text-lg lg:text-xl 2xl:text-2xl">
           Your League. Your Scores. Your Glory.
           <br />
           The ultimate hub for table-tennis results and player performance.
@@ -32,7 +32,7 @@ const HeroDesktop = () => {
 
       <div
         className="absolute bottom-0 right-2 h-80 w-60 lg:h-110 lg:w-75 xl:h-120
-       xl:w-100"
+       xl:w-100 2xl:mr-20"
       >
         <Image
           alt="WTT player"

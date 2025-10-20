@@ -9,12 +9,12 @@ export default function Home() {
         {/* hero banner_____*/}
 
         {/* desktop view */}
-        <div className="hidden 2lg:block">
+        <div className="hidden lgplus:block">
           <HomeHero />
         </div>
 
         {/* mobile view  */}
-        <div className="2lg:hidden">
+        <div className="lgplus:hidden">
           <HeroMobile />
         </div>
         <TopPlayers />

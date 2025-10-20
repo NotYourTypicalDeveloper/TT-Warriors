@@ -1,16 +1,18 @@
 import CustomShapeDivider from "./CustomShapeDivider";
 import Image from "next/image";
 
-// view for mobile & tablet devices up to "2lg"
+// view for mobile & tablet devices up to "lgplus" 940px
 const HeroMobile = () => {
   return (
     <>
-      <div className="relative"></div>
+      <div className="relative bg-red-500">
+        <CustomShapeDivider />
+      </div>
       <div className="bg-linear-to-t from-black via-red-500 to-red-400">
-        <div className="w-full p-4">
+        <div className="w-full p-6 xs:p-8 flex flex-col align-center justify-center">
           {/* title and text */}
-          <div className="mx-auto flex flex-col align-center justify-center text-white ">
-            <h1 className="uppercase font-extrabold text-4xl">
+          <div className="mx-auto text-white ">
+            <h1 className="mt-20 sm:mt-28 uppercase font-extrabold text-4xl">
               Table Tennis Warriors
             </h1>
             <p className="italic mt-3 text-lg lg:text-xl">
