@@ -1,0 +1,48 @@
+import CustomShapeDivider from "./CustomShapeDivider";
+import Image from "next/image";
+
+// breakpoint from "2lg" custom breakpoint 940px
+const HeroDesktop = () => {
+  return (
+    <section className="bg-green-500 flex h-120 lg:h-120 xl:h-120 2xl:h-140 relative ">
+      <CustomShapeDivider />
+      <div
+        className="absolute bottom-0 left-6 xl:left-1 h-80 w-60 lg:h-90 lg:w-75 xl:h-110
+       xl:w-100"
+      >
+        <Image
+          alt="WTT player"
+          src="/assets/chenmeng2.png"
+          fill
+          objectFit="contain"
+        />
+      </div>
+
+      {/* title and text */}
+      <div className="mt-26 w-sm mx-auto flex flex-col align-center justify-center text-white ">
+        <h1 className="uppercase font-extrabold text-4xl">
+          Table Tennis Warriors
+        </h1>
+        <p className="italic mt-3 text-lg lg:text-xl">
+          Your League. Your Scores. Your Glory.
+          <br />
+          The ultimate hub for table-tennis results and player performance.
+        </p>
+      </div>
+
+      <div
+        className="absolute bottom-0 right-2 h-80 w-60 lg:h-110 lg:w-75 xl:h-120
+       xl:w-100"
+      >
+        <Image
+          alt="WTT player"
+          src="/assets/truls.webp"
+          fill
+          objectFit="contain"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default HeroDesktop;
