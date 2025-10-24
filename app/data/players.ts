@@ -1,7 +1,8 @@
 export interface IPlayer {
   id: string;
   nickName: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   country: string;
   age: number;
   tags: string[];
@@ -19,7 +20,8 @@ export const players: IPlayer[] = [
   {
     id: "player-001",
     nickName: "Anne",
-    fullName: "Anne Duchamps",
+    firstName: "Anne",
+    lastName: "Duchamps",
     country: "France",
     age: 32,
     tags: ["attacker", "explosive", "quick", "killer backhand"],
@@ -35,7 +37,8 @@ export const players: IPlayer[] = [
   {
     id: "player-002",
     nickName: "Mugubot",
-    fullName: "Marius Casanovo",
+    firstName: "Marius",
+    lastName: "Casanovo",
     country: "Romania",
     age: 54,
     tags: ["pusher", "defender", "spin", "slow"],
@@ -51,7 +54,8 @@ export const players: IPlayer[] = [
   {
     id: "player-003",
     nickName: "Dimibot",
-    fullName: "Dimitri Gorbatchov",
+    firstName: "Dimitri",
+    lastName: "Gorbatchov",
     country: "Russia",
     age: 49,
     tags: ["blocker", "counter-attacker", "killer spin", "consistent"],
@@ -67,7 +71,8 @@ export const players: IPlayer[] = [
   {
     id: "player-004",
     nickName: "The Murderer",
-    fullName: "Jack O’Connor",
+    firstName: "Jack",
+    lastName: "O’Connor",
     country: "Ireland",
     age: 37,
     tags: ["attacker", "smash finisher", "aggressive", "killer spin"],
@@ -83,7 +88,8 @@ export const players: IPlayer[] = [
   {
     id: "player-005",
     nickName: "Terminator Michaela",
-    fullName: "Michaela Stoyanova",
+    firstName: "Michaela",
+    lastName: "Stoyanova",
     country: "Bulgaria",
     age: 31,
     tags: ["two-wing looper", "power topspin", "counter", "focus mode"],
@@ -99,7 +105,8 @@ export const players: IPlayer[] = [
   {
     id: "player-006",
     nickName: "Granpa' Alkis",
-    fullName: "Alkis Demetriou",
+    firstName: "Alkis",
+    lastName: "Demetriou",
     country: "Cyprus",
     age: 67,
     tags: ["long pips", "chopper", "slow ball", "defensive wall"],
@@ -115,7 +122,8 @@ export const players: IPlayer[] = [
   {
     id: "player-007",
     nickName: "Coach Beck'",
-    fullName: "Beckham Tan",
+    firstName: "Beckham",
+    lastName: "Tan",
     country: "Singapore",
     age: 45,
     tags: ["mentor", "strategist", "placement master", "smart play"],
@@ -131,7 +139,8 @@ export const players: IPlayer[] = [
   {
     id: "player-008",
     nickName: "Sneaky Kevin",
-    fullName: "Kevin Wallace",
+    firstName: "Kevin",
+    lastName: "Wallace",
     country: "China",
     age: 34,
     tags: ["deceptive serve", "spin master", "bbq player", "quick flicks"],

@@ -8,7 +8,7 @@ const HeroMobile = () => {
       <div className="relative bg-red-500">
         <CustomShapeDivider />
       </div>
-      <div className="bg-linear-to-t from-black via-red-500 to-red-400">
+      <div className="bg-linear-to-t from-black via-red-500 to-[red-400]">
         <div className="w-full p-6 xs:p-8 flex flex-col align-center justify-center">
           {/* title and text */}
           <div className="mx-auto text-white ">
@@ -23,7 +23,7 @@ const HeroMobile = () => {
           </div>
         </div>
 
-        <div className="bg-blue-200 flex justify-between items-end">
+        <div className="flex justify-between items-end">
           <div className="h-80 w-60 md:h-100 md:w-100 relative">
             <Image
               alt="WTT player"

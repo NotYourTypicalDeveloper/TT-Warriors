@@ -9,39 +9,64 @@ import {
 } from "@/shadcn-components/ui/card";
 
 import RoundedImage from "../../shared/RoundedImage";
+import { Trophy } from "lucide-react";
 
 type PlayerCardProps = {
   imageUrl: string;
-  nickName: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   wins: number;
   country: string;
 };
 const PlayerCard = ({
   imageUrl,
-  fullName,
-  nickName,
+  firstName,
+  lastName,
   wins,
   country,
 }: PlayerCardProps) => {
   return (
-    <Card className="w-full p-6 flex justify-center">
-      <CardContent className="p-3 relative">
-        <RoundedImage
-          url={imageUrl}
-          width={100}
-          height={100}
-          altText={`player ${fullName}`}
-          fallbackSrc="/assets/avatar.webp"
-        />
-        <CardTitle className="text-sm mb-1">{fullName}</CardTitle>
-        <CardDescription className="text-xs mb-2 line-clamp-2">
-          aka "{nickName}"
-        </CardDescription>
+    <Card className="w-full flex justify-center pt-0">
+      <CardContent className="relative p-0">
+        <div className="bg-[#E91E63] flex flex-col xs:flex-row justify-evenly items-center text-white pt-8 pb-6 rounded-t-lg">
+          <RoundedImage
+            url={imageUrl}
+            width={120}
+            height={120}
+            altText={`player ${firstName} ${lastName}`}
+            fallbackSrc="/assets/avatar.webp"
+          />
+          <div>
+            <CardTitle className="text-lg mb-1">{firstName}</CardTitle>
+            <CardTitle className="text-lg mb-1 uppercase">{lastName}</CardTitle>
+          </div>
+        </div>
 
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-bold">wins: {wins}</span>
-          <div>{country}</div>
+        <div className="py-6">
+          {/* bottom part */}
+          <div className="grid grid-cols-3 gap-2">
+            {/* victories  */}
+            <div className="flex flex-col items-center border-r border-gray-200">
+              <div className="flex items-center">
+                <Trophy height={20} width={25} />
+                <span className="ml-1 text-3xl">{wins}</span>
+              </div>
+              <p className="text-sm text-grey-200 w-fit">wins</p>
+            </div>
+
+            {/* country  */}
+            <div className="flex flex-col items-center border-r border-gray-200 justify-end">
+              <div className="h-8 w-8 relative">
+                <Image
+                  src="/assets/randomflag.webp"
+                  fill
+                  objectFit="contain"
+                  alt={`flag ${country}`}
+                />
+              </div>
+              <p className="text-sm text-grey-200 w-fit">{country}</p>
+            </div>
+          </div>
         </div>
       </CardContent>
     </Card>

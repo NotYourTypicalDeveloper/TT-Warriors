@@ -1,6 +1,5 @@
 import PlayerCard from "./PlayerCard";
 import { players } from "@/app/data/players";
-import { v4 as uuidv4 } from "uuid";
 
 const TopPlayers = () => {
   const topPlayersArr = players
@@ -11,13 +10,13 @@ const TopPlayers = () => {
     <section className="container mx-auto">
       <h1>Top players</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 lg:gap-6">
         {topPlayersArr.map((el) => (
           <PlayerCard
             key={el.id}
             imageUrl={`/assets/${el.id}.webp`}
-            nickName={el.nickName}
-            fullName={el.fullName}
+            firstName={el.firstName}
+            lastName={el.lastName}
             wins={el.totalWins}
             country={el.country}
           />
