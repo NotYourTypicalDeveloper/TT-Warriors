@@ -6,6 +6,7 @@ const TopPlayers = () => {
   const topPlayersArr = players
     .sort((a, b) => b.totalWins - a.totalWins)
     .slice(0, 5);
+
   return (
     <section className="container mx-auto">
       <h1>Top players</h1>
@@ -13,8 +14,8 @@ const TopPlayers = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 lg:gap-6">
         {topPlayersArr.map((el) => (
           <PlayerCard
-            key={uuidv4()}
-            imageUrl={el.imageUrl}
+            key={el.id}
+            imageUrl={`/assets/${el.id}.webp`}
             nickName={el.nickName}
             fullName={el.fullName}
             wins={el.totalWins}

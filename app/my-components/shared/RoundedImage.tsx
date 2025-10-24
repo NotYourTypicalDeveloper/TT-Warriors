@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 type RoundedImageProps = {
@@ -5,19 +7,30 @@ type RoundedImageProps = {
   width: number;
   height: number;
   altText: string;
+  fallbackSrc: string;
 };
 
-const RoundedImage = ({ url, width, height, altText }: RoundedImageProps) => {
+const RoundedImage = ({
+  url,
+  width,
+  height,
+  altText,
+  fallbackSrc,
+}: RoundedImageProps) => {
+  const [imageError, setImageError] = useState(false);
+  const urlToDisplay = url === null ? fallbackSrc : url;
+
   return (
-    <>
+    <div style={{ height: height, width: width }} className="relative">
       <Image
-        src={url}
-        height={height}
-        width={width}
+        src={imageError ? fallbackSrc : url}
+        objectFit="cover"
+        fill
         alt={altText}
         className="rounded-full aspect-square object-cover"
+        onError={() => setImageError(true)}
       />
-    </>
+    </div>
   );
 };
 

@@ -32,6 +32,7 @@ const PlayerCard = ({
           width={100}
           height={100}
           altText={`player ${fullName}`}
+          fallbackSrc="/assets/avatar.webp"
         />
         <CardTitle className="text-sm mb-1">{fullName}</CardTitle>
         <CardDescription className="text-xs mb-2 line-clamp-2">
