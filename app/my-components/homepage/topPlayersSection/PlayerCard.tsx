@@ -1,12 +1,5 @@
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/shadcn-components/ui/card";
+import { Card, CardContent, CardTitle } from "@/shadcn-components/ui/card";
 
 import RoundedImage from "../../shared/RoundedImage";
 import { Trophy } from "lucide-react";
@@ -26,13 +19,12 @@ const PlayerCard = ({
   country,
 }: PlayerCardProps) => {
   return (
-    <Card className="w-full flex justify-center pt-0">
+    <Card className="w-full flex justify-center pt-0 shadow-md hover:shadow-2xl">
       <CardContent className="relative p-0">
-        <div className="bg-[#E91E63] flex flex-col xs:flex-row justify-evenly items-center text-white pt-8 pb-6 rounded-t-lg">
+        <div className="bg-[#E91E63] flex flex-col xs:flex-row justify-evenly items-center text-white pt-8 pb-6 rounded-t-lg px-2">
           <RoundedImage
             url={imageUrl}
-            width={120}
-            height={120}
+            className="h-[120px] w-[120px] lg:h-[142px] lg:w-[142px]"
             altText={`player ${firstName} ${lastName}`}
             fallbackSrc="/assets/avatar.webp"
           />
@@ -42,7 +34,7 @@ const PlayerCard = ({
           </div>
         </div>
 
-        <div className="py-6">
+        <div className="py-6 px-2">
           {/* bottom part */}
           <div className="grid grid-cols-3 gap-2">
             {/* victories  */}

@@ -6,6 +6,7 @@
 @theme {
   --breakpoint-xs: 430px;
   --breakpoint-lgplus: 940px;
+  --breakpoint-3xl: 1920px;
 }
 
 @theme inline {
