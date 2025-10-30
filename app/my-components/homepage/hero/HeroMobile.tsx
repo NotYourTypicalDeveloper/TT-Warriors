@@ -29,7 +29,7 @@ const HeroMobile = () => {
               alt="WTT player"
               src="/assets/chenmeng2.png"
               fill
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className="hidden xs:block h-80 w-60 md:h-110 md:w-110 relative">
@@ -37,7 +37,7 @@ const HeroMobile = () => {
               alt="WTT player"
               src="/assets/truls.webp"
               fill
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>

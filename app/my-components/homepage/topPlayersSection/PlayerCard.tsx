@@ -56,7 +56,7 @@ const PlayerCard = ({
                   <Image
                     src="/assets/randomflag.webp"
                     fill
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                     alt={`flag ${country}`}
                   />
                 </div>

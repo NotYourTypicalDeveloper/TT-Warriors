@@ -21,7 +21,7 @@ const RoundedImage = ({
     <div className={`${className} relative`}>
       <Image
         src={imageError ? fallbackSrc : url}
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         alt={altText}
