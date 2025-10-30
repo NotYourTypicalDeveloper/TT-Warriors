@@ -20,6 +20,7 @@ const TopPlayers = () => {
             lastName={el.lastName}
             wins={el.totalWins}
             country={el.country}
+            countryCode={el.countryCode}
           />
         ))}
       </div>

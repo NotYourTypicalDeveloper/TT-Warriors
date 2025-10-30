@@ -4,6 +4,7 @@ export interface IPlayer {
   firstName: string;
   lastName: string;
   country: string;
+  countryCode: string;
   age: number;
   tags: string[];
   affiliatedClubs: string[];
@@ -23,6 +24,7 @@ export const players: IPlayer[] = [
     firstName: "Anne",
     lastName: "Duchamps",
     country: "France",
+    countryCode: "FR",
     age: 32,
     tags: ["attacker", "explosive", "quick", "killer backhand"],
     affiliatedClubs: ["Mayfield TTC"],
@@ -40,6 +42,7 @@ export const players: IPlayer[] = [
     firstName: "Marius",
     lastName: "Casanovo",
     country: "Romania",
+    countryCode: "RO",
     age: 54,
     tags: ["pusher", "defender", "spin", "slow"],
     affiliatedClubs: ["Mayfield TTC", "Clissold"],
@@ -57,6 +60,7 @@ export const players: IPlayer[] = [
     firstName: "Dimitri",
     lastName: "Gorbatchov",
     country: "Russia",
+    countryCode: "RU",
     age: 49,
     tags: ["blocker", "counter-attacker", "killer spin", "consistent"],
     affiliatedClubs: ["eBaTT", "Mayfield TTC"],
@@ -74,6 +78,7 @@ export const players: IPlayer[] = [
     firstName: "Jack",
     lastName: "O’Connor",
     country: "Ireland",
+    countryCode: "IE",
     age: 37,
     tags: ["attacker", "smash finisher", "aggressive", "killer spin"],
     affiliatedClubs: ["Highbury", "Clissold"],
@@ -91,6 +96,7 @@ export const players: IPlayer[] = [
     firstName: "Michaela",
     lastName: "Stoyanova",
     country: "Bulgaria",
+    countryCode: "BG",
     age: 31,
     tags: ["two-wing looper", "power topspin", "counter", "focus mode"],
     affiliatedClubs: ["eBaTT"],
@@ -108,6 +114,7 @@ export const players: IPlayer[] = [
     firstName: "Alkis",
     lastName: "Demetriou",
     country: "Cyprus",
+    countryCode: "",
     age: 67,
     tags: ["long pips", "chopper", "slow ball", "defensive wall"],
     affiliatedClubs: ["Mayfield TTC"],
@@ -125,6 +132,7 @@ export const players: IPlayer[] = [
     firstName: "Beckham",
     lastName: "Tan",
     country: "Singapore",
+    countryCode: "SG",
     age: 45,
     tags: ["mentor", "strategist", "placement master", "smart play"],
     affiliatedClubs: ["Highbury", "eBaTT"],
@@ -142,6 +150,7 @@ export const players: IPlayer[] = [
     firstName: "Kevin",
     lastName: "Wallace",
     country: "China",
+    countryCode: "CN",
     age: 34,
     tags: ["deceptive serve", "spin master", "bbq player", "quick flicks"],
     affiliatedClubs: ["Clissold", "Mayfield TTC"],

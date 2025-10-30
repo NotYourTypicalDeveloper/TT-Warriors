@@ -11,6 +11,7 @@ type PlayerCardProps = {
   lastName: string;
   wins: number;
   country: string;
+  countryCode: string;
 };
 const PlayerCard = ({
   playerId,
@@ -18,6 +19,7 @@ const PlayerCard = ({
   lastName,
   wins,
   country,
+  countryCode,
 }: PlayerCardProps) => {
   return (
     <Link href={`/players/${playerId}`}>
@@ -54,7 +56,7 @@ const PlayerCard = ({
               <div className="flex flex-col items-center border-r border-gray-200 justify-end">
                 <div className="h-8 w-8 relative">
                   <Image
-                    src="/assets/randomflag.webp"
+                    src={`https://flagsapi.com/${countryCode}/shiny/64.png`}
                     fill
                     style={{ objectFit: "contain" }}
                     alt={`flag ${country}`}
