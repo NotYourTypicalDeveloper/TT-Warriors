@@ -23,9 +23,9 @@ const PlayerCard = ({
 }: PlayerCardProps) => {
   return (
     <Link href={`/players/${playerId}`}>
-      <Card className="w-full flex justify-center pt-0 shadow-md hover:shadow-2xl">
+      <Card className="group w-full flex justify-center pt-0 shadow-md hover:shadow-2xl">
         <CardContent className="relative p-0">
-          <div className="bg-[#E91E63] flex flex-col xs:flex-row justify-evenly items-center text-white pt-8 pb-6 rounded-t-lg px-2">
+          <div className="bg-[#E91E63] group-hover:bg-[#f03172] flex flex-col xs:flex-row justify-evenly items-center text-white pt-8 pb-6 rounded-t-lg px-2 ">
             <RoundedImage
               url={`/assets/${playerId}.webp`}
               className="h-[120px] w-[120px] lg:h-[142px] lg:w-[142px]"
@@ -34,7 +34,7 @@ const PlayerCard = ({
             />
             <div>
               <CardTitle className="text-lg mb-1">{firstName}</CardTitle>
-              <CardTitle className="text-lg mb-1 uppercase">
+              <CardTitle className="text-xl mb-1 uppercase">
                 {lastName}
               </CardTitle>
             </div>

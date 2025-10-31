@@ -1,5 +1,11 @@
 import CustomShapeDivider from "./CustomShapeDivider";
 import Image from "next/image";
+import { Edu_QLD_Hand } from "next/font/google";
+
+const eduFont = Edu_QLD_Hand({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 // breakpoint from "2lg" custom breakpoint 940px
 const HeroDesktop = () => {
@@ -20,16 +26,23 @@ const HeroDesktop = () => {
       </div>
 
       {/* title and text */}
-      <div className="mt-26 w-sm xl:w-lg 2xl:w-[600px] 3xl:w-[728px] mx-auto flex flex-col align-center justify-center text-white">
-        <h1 className="uppercase font-bold text-4xl 2xl:text-6xl 2xl:mb-[2rem]">
+      <header className="mt-26 max-w-sm xl:max-w-lg 2xl:max-w-2xl mx-auto flex flex-col align-center justify-center text-white">
+        <h1
+          className={`uppercase font-bold text-5xl mb-[1rem] 2xl:text-6xl 2xl:mb-[2rem] `}
+        >
           Table Tennis Warriors
         </h1>
-        <p className="italic mt-3 text-lg lg:text-xl xl:text-2xl">
+        <p
+          className={`${eduFont.className} mt-3 text-lg lg:text-xl xl:text-2xl`}
+        >
           Your League. Your Scores. Your Glory.
-          <br />
+        </p>
+        <p
+          className={`${eduFont.className} mt-[1rem] text-md lg:text-lg xl:text-xl`}
+        >
           The ultimate hub for table-tennis results and player performance.
         </p>
-      </div>
+      </header>
 
       <div
         className="absolute bottom-0 right-2 h-80 w-60 lg:h-110 lg:w-75 xl:h-120
