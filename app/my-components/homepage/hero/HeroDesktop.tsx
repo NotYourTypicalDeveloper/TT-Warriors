@@ -20,14 +20,20 @@ const HeroDesktop = () => {
       </div>
 
       {/* title and text */}
-      <header className="mt-26 max-w-sm xl:max-w-lg 2xl:max-w-2xl mx-auto flex flex-col align-center justify-center text-white">
-        <h1 className="uppercase font-bold text-5xl mb-[1rem] 2xl:text-6xl 2xl:mb-[2rem]">
+      <header
+        className="mt-26
+        w-[420px]    
+        xl:w-[540px]
+        2xl:w-[720px]
+        mx-auto flex flex-col justify-center text-white"
+      >
+        <h1 className="font-edu font-extrabold text-5xl mb-[1rem] 2xl:text-5xl 2xl:mb-[2rem]">
           Table Tennis Warriors
         </h1>
-        <p className="font-edu mt-3 text-lg lg:text-xl xl:text-2xl">
+        <p className="font-saira mt-3 text-lg lg:text-xl xl:text-2xl">
           Your League. Your Scores. Your Glory.
         </p>
-        <p className="font-edu mt-[1rem] text-md lg:text-lg xl:text-xl">
+        <p className="font-saira mt-[1rem] text-md lg:text-lg xl:text-2xl">
           The ultimate hub for table-tennis results and player performance.
         </p>
       </header>

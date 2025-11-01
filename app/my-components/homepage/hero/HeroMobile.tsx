@@ -12,13 +12,13 @@ const HeroMobile = () => {
         <div className="w-full p-6 xs:p-8 flex flex-col align-center justify-center">
           {/* title and text */}
           <div className="mx-auto text-white ">
-            <h1 className="mt-20 sm:mt-28 uppercase font-extrabold text-4xl">
+            <h1 className="font-edu font-extrabold mt-24 sm:mt-36 text-5xl">
               Table Tennis Warriors
             </h1>
-            <p className="font-edu mt-3 text-xl lg:text-2xl">
+            <p className="font-saira mt-3 text-xl lg:text-2xl">
               Your League. Your Scores. Your Glory.
             </p>
-            <p className="font-edu mt-3 text-lg lg:text-xl">
+            <p className="font-saira mt-3 text-lg lg:text-xl">
               The ultimate hub for table-tennis results and player performance.
             </p>
           </div>

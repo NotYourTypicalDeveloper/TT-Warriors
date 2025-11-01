@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./my-components/Navigation/NavBar";
-import { Edu_QLD_Hand } from "next/font/google";
+import { Edu_QLD_Hand, Saira_Semi_Condensed } from "next/font/google";
 
 const eduFont = Edu_QLD_Hand({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-edu",
+});
+
+const sairaFont = Saira_Semi_Condensed({
+  subsets: ["latin"],
+  variable: "--font-saira",
+  weight: ["400", "500", "700"],
 });
 
 const geistSans = Geist({
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${eduFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${eduFont.variable} ${sairaFont.variable} antialiased`}
       >
         <NavBar />
         <main>{children}</main>
