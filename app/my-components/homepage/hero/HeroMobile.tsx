@@ -1,11 +1,5 @@
 import CustomShapeDivider from "./CustomShapeDivider";
 import Image from "next/image";
-import { Edu_QLD_Hand } from "next/font/google";
-
-const eduFont = Edu_QLD_Hand({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 // view for mobile & tablet devices up to "lgplus" 940px
 const HeroMobile = () => {
@@ -21,10 +15,10 @@ const HeroMobile = () => {
             <h1 className="mt-20 sm:mt-28 uppercase font-extrabold text-4xl">
               Table Tennis Warriors
             </h1>
-            <p className={`${eduFont.className} mt-3 text-xl lg:text-2xl`}>
+            <p className="font-edu mt-3 text-xl lg:text-2xl">
               Your League. Your Scores. Your Glory.
             </p>
-            <p className={`${eduFont.className} mt-3 text-lg lg:text-xl`}>
+            <p className="font-edu mt-3 text-lg lg:text-xl">
               The ultimate hub for table-tennis results and player performance.
             </p>
           </div>

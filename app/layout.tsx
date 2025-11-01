@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./my-components/Navigation/NavBar";
+import { Edu_QLD_Hand } from "next/font/google";
+
+const eduFont = Edu_QLD_Hand({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-edu",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${eduFont.variable} antialiased`}
       >
         <NavBar />
         <main>{children}</main>
